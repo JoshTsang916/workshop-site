@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity IDE 工作坊 | The Future of Web Dev</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            50: '#fbfbfd',
+                            100: '#f5f5f7',
+                            200: '#e8e8ed',
+                            300: '#d2d2d7',
+                            400: '#86868b',
+                            500: '#424245',
+                            800: '#1d1d1f',
+                            900: '#000000',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                        display: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts (Fallback if SF Pro not available) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-apple-50 text-apple-800 antialiased selection:bg-apple-900 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-apple-50/80 backdrop-blur-md border-b border-apple-200/50 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="#" class="text-sm font-semibold tracking-wide flex items-center gap-2">
+                <iconify-icon icon="lucide:sparkles" class="text-apple-500"></iconify-icon>
+                Josh AI 自動化
+            </a>
+            <div class="hidden md:flex gap-8 text-xs font-medium text-apple-500">
+                <a href="#curriculum" class="hover:text-apple-900 transition-colors">課程內容</a>
+                <a href="#instructor" class="hover:text-apple-900 transition-colors">關於講師</a>
+                <a href="#enroll" class="hover:text-apple-900 transition-colors">立即報名</a>
+            </div>
+            <a href="#enroll"
+                class="text-xs font-medium bg-apple-900 text-white px-4 py-1.5 rounded-full hover:bg-apple-800 transition-colors">
+                預約席次
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+        class="relative pt-40 pb-32 px-6 min-h-[90vh] flex flex-col items-center justify-center text-center overflow-hidden">
+        <!-- Premium Mesh Background -->
+        <div class="absolute inset-0 z-0 opacity-100 mix-blend-normal"
+            style="background-image: url('./light_gray_dynamic_mesh_1772663482335.png'); background-size: cover; background-position: center;">
+        </div>
+
+        <div class="max-w-4xl mx-auto z-10 relative">
+            <h2 class="text-sm font-medium text-apple-500 tracking-widest uppercase mb-4 gsap-reveal">The Future of Web
+                Dev</h2>
+            <h1 class="text-5xl md:text-7xl font-display font-bold tracking-tight text-apple-900 mb-6 leading-tight gsap-reveal"
+                style="animation-delay: 0.1s;">
+                學習不需要完美。<br>
+                <span class="text-apple-400">只需要勇敢開始。</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-apple-500 font-medium max-w-2xl mx-auto mb-10 leading-relaxed gsap-reveal"
+                style="animation-delay: 0.2s;">
+                跟著 AI 一起合作，3 小時內從零開始做出你的個人網站。在這裡，犯錯是安全的，這是擁抱 Agentic 紀元最好的起點。
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 gsap-reveal"
+                style="animation-delay: 0.3s;">
+                <a href="#enroll"
+                    class="w-full sm:w-auto px-8 py-4 bg-apple-900 text-white rounded-full font-medium hover:bg-black transition-all transform hover:scale-105 duration-300">
+                    立即報名工作坊
+                </a>
+                <a href="#curriculum"
+                    class="w-full sm:w-auto px-8 py-4 bg-white text-apple-900 border border-apple-300 rounded-full font-medium hover:bg-apple-100 transition-all">
+                    了解課程內容
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-32 bg-white px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-20 gsap-scroll">
+                <h2 class="text-3xl md:text-5xl font-display font-bold tracking-tight text-apple-900 mb-4">像孩子一樣探索。</h2>
+                <p class="text-lg text-apple-500 max-w-2xl mx-auto">我們為這堂課打造了最安全的實驗室，沒有報錯的恐懼，只有實踐的樂趣。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="gsap-scroll">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-apple-50 rounded-2xl">
+                        <iconify-icon icon="lucide:monitor-smartphone" class="text-3xl text-apple-900"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">安裝極簡</h3>
+                    <p class="text-apple-500 leading-relaxed">沒有繁瑣的環境設定，我們在上課前幫你準備好最輕盈俐落的開發工具。</p>
+                </div>
+                <div class="gsap-scroll" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-apple-50 rounded-2xl">
+                        <iconify-icon icon="lucide:rocket" class="text-3xl text-apple-900"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">一鍵起飛</h3>
+                    <p class="text-apple-500 leading-relaxed">透過 GitHub & Vercel，寫完的網頁只需一個按鈕就能發佈到全世界。</p>
+                </div>
+                <div class="gsap-scroll" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-apple-50 rounded-2xl">
+                        <iconify-icon icon="lucide:heart-handshake" class="text-3xl text-apple-900"></iconify-icon>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">專注創作</h3>
+                    <p class="text-apple-500 leading-relaxed">把繁雜的程式碼交給 AI，你只需要專心準備想呈現在網頁上的主題與文字。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum with Scroll Interactive Images -->
+    <section id="curriculum" class="py-32 bg-apple-50 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 gsap-scroll">
+                <h2 class="text-4xl md:text-5xl font-display font-bold tracking-tight text-apple-900 mb-6">5
+                    個步驟，<br>重塑你的創作方式。</h2>
+                <p class="text-lg text-apple-500 max-w-2xl mx-auto">3 小時的精華旅程，帶走一個完整的個人網站以及與 AI 合作的核心邏輯。</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-16 relative items-start">
+                <!-- Left: Sticky Image Display -->
+                <div class="hidden lg:block lg:w-1/2 sticky top-32 z-10">
+                    <div
+                        class="relative rounded-2xl overflow-hidden shadow-2xl bg-white aspect-[4/3] border border-black/5">
+                        <img id="step-image" src="./step_1_concept_1772663496197.png" alt="Step visualization"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Right: Scrolling Steps -->
+                <div class="w-full lg:w-1/2 cursor-steps space-y-32 py-10">
+                    <!-- Step 1 -->
+                    <div class="step-card group flex flex-col md:flex-row gap-8 items-start opacity-40 transition-opacity duration-300"
+                        data-img="./step_1_concept_1772663496197.png">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-full bg-white flex items-center justify-center text-apple-900 font-semibold shadow-sm border border-apple-200 text-2xl">
+                            01</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-apple-900 mb-4">認識你的 AI 助手</h3>
+                            <p class="text-apple-500 text-lg leading-relaxed">學會設定遊戲規則：告訴 AI「你是誰、你要做什麼」，讓它精準理解你的意圖。</p>
+                            <!-- Mobile Image Fallback -->
+                            <img src="./step_1_concept_1772663496197.png"
+                                class="mt-6 rounded-xl shadow-lg lg:hidden w-full h-auto aspect-[4/3] object-cover border border-black/5"
+                                alt="Step 1">
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step-card group flex flex-col md:flex-row gap-8 items-start opacity-40 transition-opacity duration-300"
+                        data-img="./step_2_concept_1772663523925.png">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-full bg-white flex items-center justify-center text-apple-900 font-semibold shadow-sm border border-apple-200 text-2xl">
+                            02</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-apple-900 mb-4">第一次跟 AI 合作</h3>
+                            <p class="text-apple-500 text-lg leading-relaxed">打開空資料夾，用對話在 10 秒內生成網頁，體驗零程式碼開發的魔力。</p>
+                            <!-- Mobile Image Fallback -->
+                            <img src="./step_2_concept_1772663523925.png"
+                                class="mt-6 rounded-xl shadow-lg lg:hidden w-full h-auto aspect-[4/3] object-cover border border-black/5"
+                                alt="Step 2">
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step-card group flex flex-col md:flex-row gap-8 items-start opacity-40 transition-opacity duration-300"
+                        data-img="./step_3_concept_1772663536159.png">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-full bg-white flex items-center justify-center text-apple-900 font-semibold shadow-sm border border-apple-200 text-2xl">
+                            03</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-apple-900 mb-4">幫 AI 裝備升級</h3>
+                            <p class="text-apple-500 text-lg leading-relaxed">安裝「技能包」，讓 AI 從助手變成具備品味的設計師，大幅提升產物質感。</p>
+                            <!-- Mobile Image Fallback -->
+                            <img src="./step_3_concept_1772663536159.png"
+                                class="mt-6 rounded-xl shadow-lg lg:hidden w-full h-auto aspect-[4/3] object-cover border border-black/5"
+                                alt="Step 3">
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="step-card group flex flex-col md:flex-row gap-8 items-start opacity-40 transition-opacity duration-300"
+                        data-img="./step_4_concept_1772663552214.png">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-full bg-white flex items-center justify-center text-apple-900 font-semibold shadow-sm border border-apple-200 text-2xl">
+                            04</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-apple-900 mb-4">動手做：個人網頁</h3>
+                            <p class="text-apple-500 text-lg leading-relaxed">帶入你準備好的文案，親手迭代設計，打造專屬且完美的三檔分離靜態網頁。</p>
+                            <!-- Mobile Image Fallback -->
+                            <img src="./step_4_concept_1772663552214.png"
+                                class="mt-6 rounded-xl shadow-lg lg:hidden w-full h-auto aspect-[4/3] object-cover border border-black/5"
+                                alt="Step 4">
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="step-card group flex flex-col md:flex-row gap-8 items-start opacity-40 transition-opacity duration-300"
+                        data-img="./step_5_concept_1772663585401.png">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-full bg-white flex items-center justify-center text-apple-900 font-semibold shadow-sm border border-apple-200 text-2xl">
+                            05</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-apple-900 mb-4">上線！讓全世界看到</h3>
+                            <p class="text-apple-500 text-lg leading-relaxed">把作品發佈到網路上，拿到專屬網址，跟朋友分享你的第一個 AI 專案。</p>
+                            <!-- Mobile Image Fallback -->
+                            <img src="./step_5_concept_1772663585401.png"
+                                class="mt-6 rounded-xl shadow-lg lg:hidden w-full h-auto aspect-[4/3] object-cover border border-black/5"
+                                alt="Step 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor (Clean Apple Style) -->
+    <section id="instructor" class="py-32 bg-white px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-5 gap-16 items-start">
+
+            <!-- Left Column: Photos (including n8n workshops) -->
+            <div class="lg:col-span-2 space-y-8 gsap-scroll">
+                <figure class="text-center">
+                    <img src="./josh.jpg" alt="Josh"
+                        class="w-40 h-40 rounded-full mx-auto object-cover border border-apple-200 shadow-sm relative z-10">
+                    <figcaption class="mt-4">
+                        <div class="text-xl font-bold text-apple-900">Josh</div>
+                        <div class="text-apple-500">人生鍛造所主理人・AI 自動化顧問</div>
+                    </figcaption>
+                </figure>
+
+                <!-- Workshop Evidence Photos -->
+                <div class="space-y-4">
+                    <div class="rounded-xl overflow-hidden border border-apple-200 shadow-sm group">
+                        <img src="./n8nworkshop1.jpg" alt="n8n 實戰工作坊 1"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-apple-200 shadow-sm group">
+                        <img src="./n8nworkshop2.jpg" alt="n8n 實戰工作坊 2"
+                            class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="lg:col-span-3 flex flex-col justify-center">
+                <h2 class="text-sm font-medium text-apple-500 tracking-widest uppercase mb-4 gsap-scroll">Your Guide
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-display font-bold tracking-tight text-apple-900 mb-8 gsap-scroll">
+                    科技的本質是人文。</h3>
+
+                <div class="text-lg md:text-xl text-apple-500 leading-relaxed space-y-6 gsap-scroll">
+                    <p>超過 15 年的教學經驗讓我明白，最好的學習不是填鴨，而是<strong class="text-apple-900 font-medium">降低嘗試的成本</strong>。</p>
+                    <p>你不必是工程師也能指揮 AI。我會幫你把複雜的技術拆解成白話文，讓我們一起用 AI 為自己的能力解鎖。近期並已成功領導多場 n8n 工作坊，確保每一位學員都能從觀念到實作完全落地。</p>
+                </div>
+
+                <div class="mt-12 flex gap-6 gsap-scroll">
+                    <a href="https://www.instagram.com/josh_lifeforge/"
+                        class="text-apple-400 hover:text-apple-900 transition-colors">
+                        <iconify-icon icon="lucide:instagram" class="text-2xl"></iconify-icon>
+                    </a>
+                    <a href="https://www.facebook.com/raja.dream"
+                        class="text-apple-400 hover:text-apple-900 transition-colors">
+                        <iconify-icon icon="lucide:facebook" class="text-2xl"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="enroll" class="py-32 bg-apple-100 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl md:text-6xl font-display font-bold tracking-tight text-apple-900 mb-6 gsap-scroll">
+                立刻開啟你的魔法。</h2>
+            <p class="text-xl text-apple-500 mb-10 gsap-scroll">名額有限。留下 Email，我們將發送專屬上課連結與課前準備清單給您。</p>
+
+            <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto gsap-scroll"
+                onsubmit="event.preventDefault()">
+                <input type="email" placeholder="輸入您的信箱"
+                    class="flex-1 px-6 py-4 rounded-full border border-apple-300 bg-white text-apple-900 focus:outline-none focus:ring-2 focus:ring-apple-900 focus:border-transparent text-lg"
+                    required>
+                <button type="submit"
+                    class="px-8 py-4 bg-apple-900 text-white rounded-full font-medium hover:bg-black transition-colors text-lg whitespace-nowrap">
+                    卡位報名
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-white border-t border-apple-200 px-6">
+        <div class="max-w-7xl mx-auto text-center text-apple-400 text-sm">
+            <p>Designed with minimalism. Made for creators. © 2026 Antigravity IDE.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

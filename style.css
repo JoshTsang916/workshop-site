@@ -1,0 +1,41 @@
+/* style.css - Minimalist Apple-like Design */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Enhancements */
+.font-display {
+    letter-spacing: -0.02em;
+}
+
+/* Refined Utility Classes */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Ensure smooth scrolling when using anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Subtly hide scrollbar for clean look but keep functionality */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #fbfbfd; 
+}
+::-webkit-scrollbar-thumb {
+    background: #d2d2d7; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #86868b; 
+}
+
+/* Image Polish */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
