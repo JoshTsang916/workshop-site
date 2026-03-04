@@ -61,7 +61,7 @@ export default function Home() {
         <div className="relative z-20 mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center rounded-full px-4 py-1.5 text-sm font-semibold text-cyan-400 bg-cyan-400/10 border border-cyan-400/20 mb-8">
             <Sparkles className="w-4 h-4 mr-2" />
-            2026 全新 Agentic Era 開發體驗
+            2026 全新 Agentic 紀元的開發體驗
           </div>
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl mb-8 drop-shadow-sm">
             Antigravity IDE 工作坊
@@ -89,7 +89,7 @@ export default function Home() {
               <div className="mx-auto w-16 h-16 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 mb-6">
                 <MonitorSmartphone className="w-8 h-8 text-indigo-400" />
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">準備 Antigravity</h3>
+              <h3 className="text-lg font-bold text-white mb-2">安裝 Antigravity</h3>
               <p className="text-slate-400 text-sm">請務必在上課前安裝好最新版環境。</p>
             </div>
             <div className="p-6">
@@ -104,7 +104,7 @@ export default function Home() {
                 <Code2 className="w-8 h-8 text-purple-400" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">專屬你的主題</h3>
-              <p className="text-slate-400 text-sm">先準備好自我介紹或履歷文案，上課直接做！</p>
+              <p className="text-slate-400 text-sm">先準備好網頁文案與風格，上課直接做！</p>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function Home() {
                 <div className="bg-slate-950/80 backdrop-blur-md p-6 rounded-2xl border border-slate-800">
                   <p className="text-sm font-medium text-cyan-400 mb-2">Powered by Banana Pro 2</p>
                   <h4 className="text-xl font-bold text-white">用魔法打敗魔法</h4>
-                  <p className="text-slate-400 mt-2 text-sm">這份網頁與您眼前看到的影像，皆是 AI 生成產物。</p>
+                  <p className="text-slate-400 mt-2 text-sm">這份網頁與您眼前看到的影像，皆是我與 AI 共同合作的成果。</p>
                 </div>
               </div>
             </div>
@@ -232,7 +232,7 @@ export default function Home() {
               {/* Paragraphs */}
               <div className="space-y-5 text-slate-300/90 leading-relaxed text-[15px]">
                 <p>
-                  擁有超過 <span className="text-white font-semibold">15 年的線上教學經驗</span>，我最擅長的事情，就是將複雜的技術與邏輯，拆解成<span className="text-amber-300 font-medium">麻瓜也能輕鬆理解的白話文</span>。你不必是工程師，也能學會指揮 AI。
+                  擁有超過 <span className="text-white font-semibold">15 年的教學經驗</span>，我最擅長的事情，就是將複雜的技術與邏輯，拆解成<span className="text-amber-300 font-medium">麻瓜也能輕鬆理解的白話文</span>。你不必是工程師，也能學會指揮 AI。
                 </p>
                 <p>
                   我的核心理念是「<span className="text-amber-300 font-medium">用 AI 與自動化為自己賦能</span>」。近期已成功舉辦多場 n8n 自動化工作坊，帶領新手打造專屬數位工具。我致力於透過閱讀、AI 與健身，實踐並推廣持續進化的個人成長系統。
